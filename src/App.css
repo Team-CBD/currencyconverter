@@ -8,6 +8,12 @@ body {
   background-color: rgb(15, 15, 238);
 }
 
+.converter {
+  background-color: oldlace;
+  padding: 10px;
+
+}
+
 h1 {
   margin: 0;
   margin-bottom: .5rem;

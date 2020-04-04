@@ -51,7 +51,8 @@ function handleFromAmountChange(e) {
     setAmountInFromCurrency(false)
   }
   return (
-    <>
+    
+    <div className="converter">
       <h1>Currency Converter</h1>
       <CurrencyRow
         currencyOptions={currencyOptions}
@@ -59,6 +60,7 @@ function handleFromAmountChange(e) {
         onChangeCurrency={e => setFromCurrency(e.target.value)}
         onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
+      
       />
       <div className="equals">=</div>
       <CurrencyRow
@@ -68,7 +70,8 @@ function handleFromAmountChange(e) {
         onChangeAmount={handleToAmountChange} 
         amount={toAmount}
       />
-    </>
+    </div>
+    
   );
 }
 
