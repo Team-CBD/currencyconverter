@@ -9,16 +9,16 @@ function App() {
   const [fromCurrency, setFromCurrency] = useState()
   const [toCurrency, setToCurrency] = useState()
   const [exchangeRate, setExchangeRate] = useState()
-  const [amount, setAmount] = useState(0)
+  const [amount, setAmount] = useState(1)
   const [amountInFromCurrency, setAmountInFromCurrency] = useState(true)
 
   let toAmount, fromAmount
   if (amountInFromCurrency) {
     fromAmount = amount
-    toAmount = amount * exchangeRate
+    toAmount = (amount * exchangeRate).toFixed(2)
   }else {
     toAmount = amount
-    fromAmount = amount / exchangeRate
+    fromAmount = (amount / exchangeRate).toFixed(2)
   }
 
 
